@@ -13,6 +13,8 @@ resource "aws_ec2_client_vpn_endpoint" "vpn" {
   split_tunnel           = true
   server_certificate_arn = aws_acm_certificate_validation.server_cert.certificate_arn
   tags                   = local.tags
+  vpc_id                 = local.vpc_id
+  security_group_ids     = [aws_security_group.vpn.id]
 
   authentication_options {
     type                       = "certificate-authentication"
@@ -29,7 +31,6 @@ resource "aws_ec2_client_vpn_network_association" "vpn_subnets" {
 
   client_vpn_endpoint_id = aws_ec2_client_vpn_endpoint.vpn.id
   subnet_id              = each.value
-  security_groups        = [aws_security_group.vpn.id]
 }
 
 resource "aws_ec2_client_vpn_authorization_rule" "vpn_auth_rule" {
