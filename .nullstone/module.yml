@@ -1,7 +1,7 @@
 org_name: nullstone
-name: aws-vpn
-friendly_name: AWS VPN
-description: Creates a VPN endpoint inside of your AWS network
+name: aws-openvpn
+friendly_name: AWS OpenVPN
+description: Creates an OpenVPN endpoint inside of your AWS network
 category: block
 type: vpn/aws
 appCategories: []
