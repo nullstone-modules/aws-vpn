@@ -1,6 +1,7 @@
 data "ns_connection" "network" {
-  name = "network"
-  type = "network/aws"
+  name     = "network"
+  type     = "network/aws"
+  contract = "network/aws/vpc"
 }
 
 locals {

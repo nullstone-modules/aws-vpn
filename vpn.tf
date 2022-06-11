@@ -1,6 +1,7 @@
 data "ns_connection" "ca" {
-  name = "ca"
-  type = "ca/internal/aws"
+  name     = "ca"
+  type     = "ca/internal/aws"
+  contract = "datastore/aws/ca:internal"
 }
 
 locals {

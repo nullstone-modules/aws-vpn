@@ -3,9 +3,11 @@ name: aws-openvpn
 friendly_name: AWS OpenVPN
 description: Creates an OpenVPN endpoint inside of your AWS network
 category: block
-type: vpn/aws
-appCategories: []
-layer: network
-is_public: true
+subcategory: ""
 provider_types:
     - aws
+platform: vpn
+subplatform: openvpn
+type: vpn/aws
+appCategories: []
+is_public: true

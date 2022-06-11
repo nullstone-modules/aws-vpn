@@ -1,6 +1,7 @@
 data "ns_connection" "subdomain" {
-  name = "subdomain"
-  type = "subdomain/aws"
+  name     = "subdomain"
+  type     = "subdomain/aws"
+  contract = "subdomain/aws/route53"
 }
 
 locals {
